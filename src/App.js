@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+// state is a React object with data of the component that changes over time and rerenders
+
+function App(props) {
+  const [state, setState] = useState('apple')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        console.log(state)
+      }
+      <ExampleOfProps />
     </div>
   );
 }
 
 export default App;
+
+// Props are arguments pased into React Components
+const ExampleOfProps = () => {
+  console.log('example of props')
+}
